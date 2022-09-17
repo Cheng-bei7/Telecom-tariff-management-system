@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sale.ljw.electronictariffmanagementsystem.backend.dao.RoleInfoMapper">
+
+    <resultMap id="BaseResultMap" type="sale.ljw.electronictariffmanagementsystem.backend.pojo.RoleInfo">
+            <id property="roleId" column="role_id" jdbcType="INTEGER"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <resultMap id="roleBaseResultMap" type="sale.ljw.electronictariffmanagementsystem.backend.form.RoleDisplayData">
+        <id column="role_id" property="roleId" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <collection property="moduleInfos"
+                    javaType="arraylist"
+                    ofType="sale.ljw.electronictariffmanagementsystem.backend.pojo.ModuleInfo"
+                    column="role_id"
+                    select="sale.ljw.electronictariffmanagementsystem.backend.dao.ModuleInfoMapper.findRoleModule">
+            <id property="moduleId" column="module_id" jdbcType="INTEGER"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+        </collection>
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+        role_id,name
+    </sql>
+
+    <select id="findAllDisplayData" resultMap="roleBaseResultMap">
+        select * from role_info
+    </select>
+    <select id="findRoleInfo" resultType="sale.ljw.electronictariffmanagementsystem.backend.pojo.RoleInfo">
+        SELECT * FROM role_info WHERE role_info.role_id IN (
+            SELECT role_id FROM admin_role WHERE admin_role.admin_id=#{admin_id}
+        )
+    </select>
+
+
+</mapper>

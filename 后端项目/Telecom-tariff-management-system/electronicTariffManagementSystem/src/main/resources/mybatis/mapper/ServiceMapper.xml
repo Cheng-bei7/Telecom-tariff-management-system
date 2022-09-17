@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sale.ljw.electronictariffmanagementsystem.backend.dao.ServiceMapper">
+
+    <resultMap id="BaseResultMap" type="sale.ljw.electronictariffmanagementsystem.backend.pojo.ServiceProp">
+            <id property="serviceId" column="service_id" jdbcType="INTEGER"/>
+            <result property="accountId" column="account_id" jdbcType="INTEGER"/>
+            <result property="unixHost" column="unix_host" jdbcType="VARCHAR"/>
+            <result property="osUsername" column="os_username" jdbcType="VARCHAR"/>
+            <result property="loginPasswd" column="login_passwd" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="CHAR"/>
+            <result property="createDate" column="create_date" jdbcType="DATE"/>
+            <result property="pauseDate" column="pause_date" jdbcType="DATE"/>
+            <result property="closeDate" column="close_date" jdbcType="DATE"/>
+            <result property="costId" column="cost_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        service_id,account_id,unix_host,
+        os_username,login_passwd,status,
+        create_date,pause_date,close_date,
+        cost_id
+    </sql>
+
+    <select id="findService" resultType="map">
+        SELECT service.service_id serviceId,service.account_id accountId,service.unix_host unisHost,service.os_username osUsername,
+               service.status,account.idcard_no accountIdCard,account.real_name realName,cost.name,cost.descr,service.cost_id costId
+        FROM service
+                 INNER JOIN account ON service.account_id=account.account_id
+                 INNER JOIN cost ON cost.cost_id=service.cost_id
+        WHERE 1=1
+        <if test='osName != null and osName != "" '>
+            AND service.os_username LIKE CONCAT('%',#{osName},'%')
+        </if>
+        <if test='ip != null and ip != "" '>
+            AND service.unix_host LIKE CONCAT('%',#{ip},'%')
+        </if>
+        <if test='idcardNo != null and idcardNo != "" '>
+            AND account.idcard_no LIKE CONCAT('%',#{idcardNo},'%')
+        </if>
+        <if test='status != null and status != "" '>
+            AND service.status LIKE CONCAT('%',#{status},'%')
+        </if>
+    </select>
+</mapper>

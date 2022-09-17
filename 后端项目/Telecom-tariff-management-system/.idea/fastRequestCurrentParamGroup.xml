@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="fastRequestCurrentParamGroup">
+    <option name="bodyParamMap">
+      <map>
+        <entry key="adminInformation">
+          <value>
+            <Object />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="className" value="sale.ljw.electronictariffmanagementsystem.backend.api.AdminManageServlet" />
+    <option name="method" value="findAllAdmin" />
+    <option name="methodDescription" value="查找全部数据" />
+    <option name="methodType" value="POST" />
+    <option name="module" value="electronicTariffManagementSystem" />
+    <option name="originUrl" value="/adminManage/findAllAdmin" />
+    <option name="url" value="/adminManage/findAllAdmin" />
+  </component>
+</project>

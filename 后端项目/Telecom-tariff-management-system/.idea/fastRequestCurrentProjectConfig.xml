@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="fastRequestCurrentProjectConfig">
+    <option name="domain" value="http://localhost:8080/telecommunication" />
+    <option name="enableEnv" value="local8080" />
+    <option name="enableProject" value="生产实习" />
+    <option name="headerList">
+      <list>
+        <DataMapping>
+          <option name="type" value="token" />
+          <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjMzMjMzNzQsInVzZXJJZCI6MSwidXNlcm5hbWUiOiLmiornrKzkuIDkuKrlvZPmtYvor5XmlbDmja7llr0ifQ.91aCBELgsnR2s6c-7LJ8ki17-wI735qYwdLt2JVG9Rs" />
+        </DataMapping>
+      </list>
+    </option>
+  </component>
+</project>

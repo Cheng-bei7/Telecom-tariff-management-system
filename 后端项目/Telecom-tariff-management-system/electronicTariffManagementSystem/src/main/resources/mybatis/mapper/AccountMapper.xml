@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sale.ljw.electronictariffmanagementsystem.backend.dao.AccountMapper">
+
+    <resultMap id="BaseResultMap" type="sale.ljw.electronictariffmanagementsystem.backend.pojo.Account">
+        <id property="accountId" column="account_id" jdbcType="INTEGER"/>
+        <result property="recommenderId" column="recommender_id" jdbcType="INTEGER"/>
+        <result property="loginName" column="login_name" jdbcType="VARCHAR"/>
+        <result property="loginPasswd" column="login_passwd" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="CHAR"/>
+        <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+        <result property="pauseDate" column="pause_date" jdbcType="TIMESTAMP"/>
+        <result property="closeDate" column="close_date" jdbcType="TIMESTAMP"/>
+        <result property="realName" column="real_name" jdbcType="VARCHAR"/>
+        <result property="idcardNo" column="idcard_no" jdbcType="CHAR"/>
+        <result property="birthdate" column="birthdate" jdbcType="TIMESTAMP"/>
+        <result property="gender" column="gender" jdbcType="CHAR"/>
+        <result property="occupation" column="occupation" jdbcType="VARCHAR"/>
+        <result property="telephone" column="telephone" jdbcType="VARCHAR"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="mailaddress" column="mailaddress" jdbcType="VARCHAR"/>
+        <result property="zipcode" column="zipcode" jdbcType="CHAR"/>
+        <result property="qq" column="qq" jdbcType="VARCHAR"/>
+        <result property="lastLoginTime" column="last_login_time" jdbcType="TIMESTAMP"/>
+        <result property="lastLoginIp" column="last_login_ip" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        account_id
+        ,recommender_id,login_name,
+        login_passwd,status,create_date,
+        pause_date,close_date,real_name,
+        idcard_no,birthdate,gender,
+        occupation,telephone,email,
+        mailaddress,zipcode,qq,
+        last_login_time,last_login_ip
+    </sql>
+    <select id="findAllAccount" resultType="java.util.Map">
+        SELECT DISTINCT account.account_id accountId,account.recommender_id recommenderId,account.login_name
+        loginName,account.real_name realName,account.idcard_no
+        idcardNo,account.status,DATE_FORMAT(account.create_date,'%Y年%m月%d日 %H时%i分')
+        createDate,DATE_FORMAT(account.last_login_time,'%Y年%m月%d日 %H时%i分') lastLoginTime
+        FROM account
+        INNER JOIN account ac ON ac.account_id=account.recommender_id OR (account.recommender_id IS NULL)
+        where 1=1
+        <if test='name != null and name != "" '>
+            AND account.real_name LIKE CONCAT('%',#{name},'%')
+        </if>
+        <if test='loginName != null and loginName != "" '>
+            AND account.login_name LIKE CONCAT('%',#{loginName},'%')
+        </if>
+        <if test='idCard != null and idCard != "" '>
+            AND account.idcard_no LIKE CONCAT('%',#{idCard},'%')
+        </if>
+          <if test='status != null and status != "" '>
+            AND account.status=#{status}
+        </if>
+    </select>
+    <select id="findReferrerPolicy" resultType="java.lang.Integer">
+        SELECT account_id
+        FROM account
+        WHERE idcard_no=#{idCard}
+        ORDER BY create_date ASC,recommender_id ASC
+        LIMIT 0,1
+    </select>
+</mapper>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Telecom-tariff-management-system.iml" filepath="$PROJECT_DIR$/.idea/Telecom-tariff-management-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/electronicTariffManagementSystem/electronicTariffManagementSystem.iml" filepath="$PROJECT_DIR$/electronicTariffManagementSystem/electronicTariffManagementSystem.iml" />
+    </modules>
+  </component>
+</project>

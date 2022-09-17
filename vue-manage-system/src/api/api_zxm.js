@@ -1,0 +1,31 @@
+import axios from 'axios';
+let baseszxm='http://localhost:8080/telecommunication';
+export const loginByAdmin = params => { return axios.post(`${baseszxm}/loginAdmin/login`,params); };
+/*做个验证把，如果这个页面会话域中存在数据则放入数据并发送请求*/
+// alert(sessionStorage.getItem('AppointToken'))
+export const CostAdmin = (params,configs) => { return axios.post(`${baseszxm}/costByAdmin/getAllCost`,params,configs); };
+export const CostAdd = (params,configs)  => { return axios.post(`${baseszxm}/costByAdmin/addCostByAdmin`,params,configs); };
+export const UpdateCost = (params,configs)  => { return axios.post(`${baseszxm}/costByAdmin/editCostById`,params,configs); };
+export const DeleteCostById = (params,configs)  => { return axios.post(`${baseszxm}/costByAdmin/deleteCostByIds`,params,configs); };
+export const AccountAdmin = (params,configs)  => { return axios.post(`${baseszxm}/accountByAdmin/findAllAccount`,params,configs); };
+export const AccountAdd = (params,configs)  => { return axios.post(`${baseszxm}/accountByAdmin/addAccount`,params,configs); };
+export const DeleteAccountById = (params,configs)  => { return axios.get(`${baseszxm}/accountByAdmin/deleteById/`+params,configs); };
+export const PauseAccountById = (params,configs)  => { return axios.get(`${baseszxm}/accountByAdmin/suspendAccount/`+params,configs); };
+export const AccountById = (params,configs)  => { return axios.get(`${baseszxm}/accountByAdmin/getAccountOneById/`+params,configs);};
+export const UpdateAccount = (params,configs)  => { return axios.post(`${baseszxm}/accountByAdmin/updateAccountById`,params,configs); };
+export const ServiceAdmin = (params,configs)  => { return axios.post(`${baseszxm}/accountServiceByAdmin/findServiceByPage`,params,configs); };
+export const PauseServiceById = (params,configs)  => { return axios.get(`${baseszxm}/accountServiceByAdmin/suspendBusinessAccountById/`+params,configs); };
+export const DeleteServiceById = (params,configs)  => { return axios.get(`${baseszxm}/accountServiceByAdmin/deleteAccountById/`+params,configs); };
+export const GetCostList = (configs)  => { return axios.get(`${baseszxm}/costByAdmin/getCostList`,configs); };
+export const UpdateService = (params,configs)  => { return axios.post(`${baseszxm}/accountServiceByAdmin/editAccountServiceById`,params,configs); };
+export const AddService = (params,configs)  => { return axios.post(`${baseszxm}/accountServiceByAdmin/addAccountService`,params,configs); };
+export const GetRoleList = (params,configs)  => { return axios.get(`${baseszxm}/roleModule/findAllRoleModule/`+params,configs); };
+export const GetRoleModule = (configs)  => { return axios.get(`${baseszxm}/roleModule/findAllModuleInfo`,configs); };
+export const UpdateRole = (params,configs)  => { return axios.post(`${baseszxm}/roleModule/editRoleInfo`,params,configs); };
+export const AddRoles = (params,configs)  => { return axios.post(`${baseszxm}/roleModule/addRoleInfo`,params,configs); };
+export const DeleteRoleModule = (params,configs)  => { return axios.get(`${baseszxm}/roleModule/deleteRoleInfoById/`+params,configs); };
+export const AdminList = (params,configs)  => { return axios.post(`${baseszxm}/adminManage/findAllAdmin`,params,configs); };
+export const AdminRole = (configs)  => { return axios.get(`${baseszxm}/adminManage/getAllRole`,configs); };
+export const DeleteAdmin = (params,configs)  => { return axios.get(`${baseszxm}/adminManage/deleteAdminById/`+params,configs); };
+export const AddAdmin = (params,configs)  => { return axios.post(`${baseszxm}/adminManage/addAdminInformation`,params,configs); };
+export const UpdateAdmin = (params,configs)  => { return axios.post(`${baseszxm}/adminManage/editAdminInformation`,params,configs); };

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="fastRequestHistoryConfig">
+    <option name="historyList">
+      <list>
+        <ResponseHistory>
+          <option name="className" value="sale.ljw.electronictariffmanagementsystem.backend.api.AdminManageServlet" />
+          <option name="code" value="503" />
+          <option name="enableEnv" value="local8080" />
+          <option name="enableProject" value="生产实习" />
+          <option name="method" value="findAllAdmin" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="查找全部数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;page&quot;: 1,&#10;  &quot;moduleId&quot;: [&#10;    &#10;  ],&#10;  &quot;roleName&quot;: &quot;&quot;&#10;}" />
+              <option name="className" value="sale.ljw.electronictariffmanagementsystem.backend.api.AdminManageServlet" />
+              <option name="jsonDocument" value="{&#10;  &quot;page&quot;: &quot;当前页码&quot;,&#10;  &quot;moduleId&quot;: [&#10;    &quot;权限id&quot;&#10;  ],&#10;  &quot;roleName&quot;: &quot;角色名称&quot;&#10;}" />
+              <option name="method" value="findAllAdmin" />
+              <option name="methodDescription" value="查找全部数据" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/adminManage/findAllAdmin" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/adminManage/findAllAdmin" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/telecommunication/adminManage/findAllAdmin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 38&#13;&#10;    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjMzMjMzNzQsInVzZXJJZCI6MSwidXNlcm5hbWUiOiLmiornrKzkuIDkuKrlvZPmtYvor5XmlbDmja7llr0ifQ.91aCBELgsnR2s6c-7LJ8ki17-wI735qYwdLt2JVG9Rs&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;roleName&quot;:&quot;&quot;,&quot;page&quot;:1,&quot;moduleId&quot;:[]}&#13;&#10;" />
+          <option name="response" value="{&quot;insufficientPermissions&quot;:&quot;false&quot;}" />
+          <option name="url" value="/adminManage/findAllAdmin" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="sale.ljw.electronictariffmanagementsystem.backend.api.AdminManageServlet" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="local8080" />
+          <option name="enableProject" value="生产实习" />
+          <option name="method" value="findAllAdmin" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="查找全部数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;page&quot;: 1,&#10;  &quot;moduleId&quot;: [&#10;    1&#10;  ],&#10;  &quot;roleName&quot;: &quot;&quot;&#10;}" />
+              <option name="className" value="sale.ljw.electronictariffmanagementsystem.backend.api.AdminManageServlet" />
+              <option name="jsonDocument" value="{&#10;  &quot;page&quot;: &quot;当前页码&quot;,&#10;  &quot;moduleId&quot;: [&#10;    &quot;权限id&quot;&#10;  ],&#10;  &quot;roleName&quot;: &quot;角色名称&quot;&#10;}" />
+              <option name="method" value="findAllAdmin" />
+              <option name="methodDescription" value="查找全部数据" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/adminManage/findAllAdmin" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/adminManage/findAllAdmin" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/telecommunication/adminManage/findAllAdmin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 39&#13;&#10;    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjMzMjMzNzQsInVzZXJJZCI6MSwidXNlcm5hbWUiOiLmiornrKzkuIDkuKrlvZPmtYvor5XmlbDmja7llr0ifQ.91aCBELgsnR2s6c-7LJ8ki17-wI735qYwdLt2JVG9Rs&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;roleName&quot;:&quot;&quot;,&quot;page&quot;:1,&quot;moduleId&quot;:[1]}&#13;&#10;" />
+          <option name="response" value="{&quot;msgId&quot;:&quot;查找成功&quot;,&quot;result&quot;:{&quot;endRow&quot;:3,&quot;hasNextPage&quot;:false,&quot;hasPreviousPage&quot;:false,&quot;isFirstPage&quot;:true,&quot;isLastPage&quot;:true,&quot;list&quot;:[{&quot;adminCode&quot;:&quot;admin&quot;,&quot;adminId&quot;:1,&quot;email&quot;:&quot;ceshi@gm.com&quot;,&quot;enrolldate&quot;:&quot;2022年09月03日&quot;,&quot;enrolldateCoding&quot;:1662134400000,&quot;name&quot;:&quot;把第一个当测试数据喽&quot;,&quot;roleInfo&quot;:[{&quot;name&quot;:&quot;超级管理员&quot;,&quot;roleId&quot;:100},{&quot;name&quot;:&quot;营业员&quot;,&quot;roleId&quot;:200}],&quot;telephone&quot;:&quot;15566337445&quot;},{&quot;adminCode&quot;:&quot;admin1&quot;,&quot;adminId&quot;:2,&quot;email&quot;:&quot;12@ni.com&quot;,&quot;enrolldate&quot;:&quot;2022年09月13日&quot;,&quot;enrolldateCoding&quot;:1662998400000,&quot;name&quot;:&quot;张四&quot;,&quot;roleInfo&quot;:[{&quot;name&quot;:&quot;营业员&quot;,&quot;roleId&quot;:200}],&quot;telephone&quot;:&quot;12233556445&quot;},{&quot;adminCode&quot;:&quot;五条悟&quot;,&quot;adminId&quot;:3,&quot;email&quot;:&quot;12kk@hm.com&quot;,&quot;enrolldate&quot;:&quot;2022年09月16日&quot;,&quot;enrolldateCoding&quot;:1663257600000,&quot;name&quot;:&quot;五条悟&quot;,&quot;roleInfo&quot;:[{&quot;name&quot;:&quot;超级管理员&quot;,&quot;roleId&quot;:100}],&quot;telephone&quot;:&quot;15566443774&quot;}],&quot;navigateFirstPage&quot;:1,&quot;navigateLastPage&quot;:1,&quot;navigatePages&quot;:8,&quot;navigatepageNums&quot;:[1],&quot;nextPage&quot;:0,&quot;pageNum&quot;:1,&quot;pageSize&quot;:10,&quot;pages&quot;:1,&quot;prePage&quot;:0,&quot;size&quot;:3,&quot;startRow&quot;:1,&quot;total&quot;:3},&quot;resultType&quot;:0,&quot;statusCode&quot;:&quot;C200&quot;}" />
+          <option name="url" value="/adminManage/findAllAdmin" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="sale.ljw.electronictariffmanagementsystem.backend.api.LoginServlet" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="local8080" />
+          <option name="enableProject" value="生产实习" />
+          <option name="method" value="loginByAdmin" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="登录" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;loginName&quot;: &quot;admin&quot;,&#10;  &quot;password&quot;: &quot;123456&quot;&#10;}" />
+              <option name="className" value="sale.ljw.electronictariffmanagementsystem.backend.api.LoginServlet" />
+              <option name="jsonDocument" value="{&#10;  &quot;loginName&quot;: &quot;登录凭证&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;&#10;}" />
+              <option name="method" value="loginByAdmin" />
+              <option name="methodDescription" value="登录" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/loginAdmin/login" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/loginAdmin/login" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/telecommunication/loginAdmin/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 41&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;password&quot;:&quot;123456&quot;,&quot;loginName&quot;:&quot;admin&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;msgId&quot;:&quot;登录成功&quot;,&quot;result&quot;:{&quot;adminInformation&quot;:{&quot;adminId&quot;:1,&quot;email&quot;:&quot;ceshi@gm.com&quot;,&quot;name&quot;:&quot;把第一个当测试数据喽&quot;,&quot;telephone&quot;:&quot;15566337445&quot;},&quot;showView&quot;:[{&quot;name&quot;:&quot;角色管理&quot;},{&quot;name&quot;:&quot;管理员&quot;},{&quot;name&quot;:&quot;资费管理&quot;},{&quot;name&quot;:&quot;账务账号&quot;},{&quot;name&quot;:&quot;业务账号&quot;},{&quot;name&quot;:&quot;账单管理&quot;},{&quot;name&quot;:&quot;报表&quot;}]},&quot;resultType&quot;:0,&quot;statusCode&quot;:&quot;C200&quot;}" />
+          <option name="url" value="/loginAdmin/login" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="sale.ljw.electronictariffmanagementsystem.backend.api.AdminManageServlet" />
+          <option name="code" value="403" />
+          <option name="enableEnv" value="local8080" />
+          <option name="enableProject" value="生产实习" />
+          <option name="method" value="findAllAdmin" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="查找全部数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;page&quot;: 1,&#10;  &quot;moduleId&quot;: [&#10;    1&#10;  ],&#10;  &quot;roleName&quot;: &quot;&quot;&#10;}" />
+              <option name="className" value="sale.ljw.electronictariffmanagementsystem.backend.api.AdminManageServlet" />
+              <option name="jsonDocument" value="{&#10;  &quot;page&quot;: &quot;当前页码&quot;,&#10;  &quot;moduleId&quot;: [&#10;    &quot;权限id&quot;&#10;  ],&#10;  &quot;roleName&quot;: &quot;角色名称&quot;&#10;}" />
+              <option name="method" value="findAllAdmin" />
+              <option name="methodDescription" value="查找全部数据" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/adminManage/findAllAdmin" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/adminManage/findAllAdmin" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/telecommunication/adminManage/findAllAdmin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 39&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;roleName&quot;:&quot;&quot;,&quot;page&quot;:1,&quot;moduleId&quot;:[1]}&#13;&#10;" />
+          <option name="response" value="{&quot;insufficientPermissions&quot;:&quot;false&quot;}" />
+          <option name="url" value="/adminManage/findAllAdmin" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="sale.ljw.electronictariffmanagementsystem.backend.api.LoginServlet" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="local8080" />
+          <option name="enableProject" value="生产实习" />
+          <option name="method" value="loginByAdmin" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="登录" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;loginName&quot;: &quot;admin&quot;,&#10;  &quot;password&quot;: &quot;123456&quot;&#10;}" />
+              <option name="className" value="sale.ljw.electronictariffmanagementsystem.backend.api.LoginServlet" />
+              <option name="jsonDocument" value="{&#10;  &quot;loginName&quot;: &quot;登录凭证&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;&#10;}" />
+              <option name="method" value="loginByAdmin" />
+              <option name="methodDescription" value="登录" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/loginAdmin/login" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/loginAdmin/login" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/telecommunication/loginAdmin/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 41&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;password&quot;:&quot;123456&quot;,&quot;loginName&quot;:&quot;admin&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;msgId&quot;:&quot;C200&quot;,&quot;result&quot;:{&quot;email&quot;:&quot;lj@gm.com&quot;,&quot;name&quot;:&quot;张三&quot;,&quot;telephone&quot;:&quot;15566334775&quot;},&quot;resultType&quot;:0,&quot;statusCode&quot;:0}" />
+          <option name="url" value="/loginAdmin/login" />
+        </ResponseHistory>
+      </list>
+    </option>
+  </component>
+</project>
