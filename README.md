@@ -14,3 +14,5 @@
 ## 使用技术
 前端：vue+element+axios+node.js+jQuery等
 后端：springBoot+springMVC+mysql+mybatis+mybatis plus+redis等
+
+后端委托Larimari1314完成，github地址：https://github.com/Larimari1314 ，csdn地址：https://blog.csdn.net/weixin_45677046?spm=1000.2115.3001.5343
