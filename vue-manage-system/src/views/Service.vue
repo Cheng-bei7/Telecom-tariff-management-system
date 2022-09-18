@@ -346,13 +346,12 @@ export default {
     },
     //cost下拉列表
     CostGetList(){
-      let para = this.costId;
       let configs={
         headers:{
           token: sessionStorage.getItem('AppointToken')
         }
       };
-      GetCostList(para,configs).then((res)=>{
+      GetCostList(configs).then((res)=>{
         if (res.data.statusCode === 'C200') {
           this.costlist=res.data.result;
         } else{

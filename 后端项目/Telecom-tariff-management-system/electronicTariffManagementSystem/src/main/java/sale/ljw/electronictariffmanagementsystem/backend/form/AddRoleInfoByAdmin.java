@@ -7,6 +7,7 @@ import lombok.Data;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 
 @Data
@@ -17,6 +18,6 @@ public class AddRoleInfoByAdmin {
     private String name;
 
     @ApiModelProperty(value = "权限列表")
-    @Min(1)
+    @Size(min = 1)
     private ArrayList<Integer> moduleId;
 }

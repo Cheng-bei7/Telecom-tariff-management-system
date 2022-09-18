@@ -23,6 +23,9 @@ axios.interceptors.response.use(
          if(error.response.status == 503){
              window.location.href='http://localhost:3000/#/403'
              return Promise.reject(error);
+        }if(error.response.status == 403){
+            window.location.href='http://localhost:3000/#/login'
+            return Promise.reject(error);
         }
     }
 );

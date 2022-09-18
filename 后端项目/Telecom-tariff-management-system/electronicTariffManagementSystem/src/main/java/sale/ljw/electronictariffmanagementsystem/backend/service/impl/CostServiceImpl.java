@@ -1,6 +1,7 @@
 package sale.ljw.electronictariffmanagementsystem.backend.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.pagehelper.PageHelper;
@@ -9,12 +10,15 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sale.ljw.electronictariffmanagementsystem.backend.dao.CostMapper;
+import sale.ljw.electronictariffmanagementsystem.backend.dao.ServiceMapper;
 import sale.ljw.electronictariffmanagementsystem.backend.form.AddCostByAdmin;
 import sale.ljw.electronictariffmanagementsystem.backend.form.EditCostFromByAdmin;
 import sale.ljw.electronictariffmanagementsystem.backend.form.FindCostFrom;
 import sale.ljw.electronictariffmanagementsystem.backend.form.Ids;
 import sale.ljw.electronictariffmanagementsystem.backend.pojo.Cost;
+import sale.ljw.electronictariffmanagementsystem.backend.pojo.ServiceProp;
 import sale.ljw.electronictariffmanagementsystem.backend.service.CostService;
+import sale.ljw.electronictariffmanagementsystem.backend.service.ServiceService;
 import sale.ljw.electronictariffmanagementsystem.common.http.ResponseResult;
 import sale.ljw.electronictariffmanagementsystem.common.http.StatusCode;
 
@@ -33,6 +37,9 @@ public class CostServiceImpl extends ServiceImpl<CostMapper, Cost>
         implements CostService {
     @Autowired
     private CostMapper costMapper;
+
+    @Autowired
+    private ServiceMapper serviceMapper;
 
     @Override
     public String findAllCost(FindCostFrom costFrom) {
@@ -82,6 +89,14 @@ public class CostServiceImpl extends ServiceImpl<CostMapper, Cost>
 
     @Override
     public String deleteCostByIds(Ids ids) {
+        //查询当前选中的数据是否被service调用
+        for (String id : ids.getIds()) {
+            QueryWrapper<ServiceProp> queryWrapper=new QueryWrapper<>();
+            queryWrapper.eq("cost_id",id);
+            if(serviceMapper.selectCount(queryWrapper)!=0){
+                return JSON.toJSONString(ResponseResult.getErrorResult("业务表中关联改表数据，所以不可删除", StatusCode.NOT_FOUND));
+            }
+        }
         int result = costMapper.deleteBatchIds(ids.getIds());
         if (result != 0) {
             return JSON.toJSONString(ResponseResult.getSuccessResult(null, "删除成功"));
