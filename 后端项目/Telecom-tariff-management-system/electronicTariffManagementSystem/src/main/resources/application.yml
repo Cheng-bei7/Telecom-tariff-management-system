@@ -17,10 +17,10 @@ spring:
       enabled: true
       file-size-threshold: 10MB
   datasource:
-    username: electronicTariff
+    username: ***
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: 2pEfv6512i52P3ZNcrNT
-    url: jdbc:mysql://123.57.20.244:3306/electronicTariffManagementSystem?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+    password: ***
+    url: jdbc:mysql://***/electronicTariffManagementSystem?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
     hikari:
       maximum-pool-size: 50
       minimum-idle: 10
